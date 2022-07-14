@@ -3,7 +3,7 @@ class Node {
 }
 
 class DoublyNode extends Node {
-    constructor() { this.prev = undefined; }
+    constructor(value) { super(value); this.prev = undefined; }
 }
 
 export { Node, DoublyNode };

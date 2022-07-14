@@ -1,7 +1,7 @@
 import { Node, DoublyNode } from "./data_node.js"
 
 class LinkedList {
-    constructor() { this.head = this.tail = undefined; this.count = 0; }
+    constructor() { this.head = undefined; this.count = 0; }
 
 
     /**
@@ -103,7 +103,7 @@ class LinkedList {
         let node = this.head;
 
         for (let i = 0; i < this.count && node != null; i++) {
-            if (item === node.item) return i;
+            if (item === node.value) return i;
             node = node.next;
         }
         return -1;
@@ -158,14 +158,14 @@ class LinkedList {
 }
 
 class DoublyLinkedList extends LinkedList {
-    constructor() { this.tail = undefined; }
+    constructor() { super(); this.tail = undefined; }
 
     /**
      * Appends a new item to the end of th linked list.
      * @param {any} item New item to add to the list.
      */
     push(item) {
-        const node = new Node(item);
+        const node = new DoublyNode(item);
         
         // checks whether linked list is empty
         if (this.head === undefined) {
@@ -191,7 +191,7 @@ class DoublyLinkedList extends LinkedList {
      */
     insert(item, index) {
         if (index >= 0 && index <= this.count) {
-            const node = new Node(item);
+            const node = new DoublyNode(item);
             let current = this.head;
 
             if (index === 0) {
@@ -251,4 +251,4 @@ class DoublyLinkedList extends LinkedList {
     }
 }
 
-export { LinkedList };
+export { LinkedList, DoublyLinkedList };

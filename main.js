@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
-import { LinkedList } from './src/model/linked_list.js'
+import { DoublyLinkedList } from './src/model/linked_list.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
