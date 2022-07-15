@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
-import { setupText } from './src/sentences.js'
+import { setupText } from './src/text.js'
 import quotes from './src/json/quote.json'
 
 // document.querySelector('#app').innerHTML = `
